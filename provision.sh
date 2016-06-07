@@ -9,8 +9,6 @@
 #                to calculate population allele frequency for an input .vcf.
 # 
 #-----------------------------------------------------------------------------
-
-
 ### update the repository source list 
 apt-get update -y 
 
@@ -43,10 +41,6 @@ rm hapmap3.8populations.hg19.zip
 mkdir -p /mydata 
 
 ### CLEAN-UP
-###    move workflow.sh and runexample.sh to /opt directory
 mv /opt/dockerhub-iadmix/runexample.sh /opt
 mv /opt/dockerhub-iadmix/workflow.sh /opt
-
-### CLEAN-UP
-###    remove docker files
 rm /opt/dockerhub-iadmix/Dockerfile
