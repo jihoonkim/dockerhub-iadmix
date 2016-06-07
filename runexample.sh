@@ -28,8 +28,8 @@ cd /mydata
 
 # download input data for a test run
 if [ !  -f /mydata/NA12878_GIAB.vcf ]; then
-   # download input data
-   curl -O ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/latest/supplementaryfiles/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
+   # download an example input file (.vcf) from NCBI
+   wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/latest/supplementaryfiles/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
 
    # extract the compressed file 
    gunzip NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
