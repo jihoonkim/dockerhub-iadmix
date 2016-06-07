@@ -19,10 +19,6 @@ apt-get install -y  autoconf build-essential git g++ libncurses5-dev \
  libssl-dev make pkg-config software-properties-common python wget zip zlibc \
  zlib1g zlib1g-dev 
 
-### make a directory for user data
-mkdir -p /mydata 
-
-
 ### install vcftools to convert .vcf to PLINK format file
 cd /opt
 git clone https://github.com/vcftools/vcftools.git 
@@ -41,3 +37,14 @@ cd /opt/iADMIX-v0.2
 wget https://sites.google.com/site/vibansal/software/iAdmix/hapmap3.8populations.hg19.zip 
 unzip hapmap3.8populations.hg19.zip
 rm hapmap3.8populations.hg19.zip
+
+
+### make a directory for user data
+mkdir -p /mydata 
+
+### move workflow.sh and runexample.sh to /opt directory
+mv runexample.sh /opt
+mv workflow.sh /opt
+
+### remove docker files
+rm Dockerfile
