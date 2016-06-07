@@ -42,9 +42,11 @@ rm hapmap3.8populations.hg19.zip
 ### make a directory for user data
 mkdir -p /mydata 
 
-### move workflow.sh and runexample.sh to /opt directory
-mv runexample.sh /opt
-mv workflow.sh /opt
+### CLEAN-UP
+###    move workflow.sh and runexample.sh to /opt directory
+mv /opt/dockerhub-iadmix/runexample.sh /opt
+mv /opt/dockerhub-iadmix/workflow.sh /opt
 
-### remove docker files
-rm Dockerfile
+### CLEAN-UP
+###    remove docker files
+rm /opt/dockerhub-iadmix/Dockerfile
