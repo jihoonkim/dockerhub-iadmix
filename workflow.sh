@@ -5,9 +5,9 @@
 #  Description : A workflow script for iAdmix docker 
 #                    (https://hub.docker.com/r/j5kim/iadmix)
 #                to calculate population allele frequency on input .vcf file.
-#                /opt/workspace --> a directory for workflow.sh
-#                /mydata        --> a directory for runexample.sh, example 
-#                                   data and user data   
+#                /opt     --> a directory for workflow.sh
+#                /mydata  --> a directory for runexample.sh, example data and
+#                             user data   
 #-----------------------------------------------------------------------------
 ### create an environment variable for sample .vcf file to shorten the input file
 export INPUT_PREFIX=$1

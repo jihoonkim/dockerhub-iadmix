@@ -14,10 +14,10 @@
 #
 #  Input data: Put the user input in a local host computer directory and
 #              mount it during docker run. The workflow is already loaded in
-#              the dockek at /opt/workspace. For example, in a host computer,
+#              the docker at /opt directory. For example, in a host computer,
 #              run as
 #              $ docker run -t -i -v /Users/JohnDoe/MyDockers/iAdmix:/mydata \
-#                  j5kim/iadmix:latest /bin/bash /opt/workspace/workflow.sh  \
+#                  j5kim/iadmix:latest /bin/bash /opt/workflow.sh  \
 #                  /mydata/NA12878_GIAB
 #-----------------------------------------------------------------------------
 # make a /mydata directory if not exists.change a directory 
@@ -40,4 +40,4 @@ fi
 
 # run the workflow with the preloaded workflow.sh script
 # input is the prefix of the .vcf file without file extension
-bash /opt/workspace/workflow.sh /mydata/NA12878_GIAB
+bash /opt/workflow.sh /mydata/NA12878_GIAB

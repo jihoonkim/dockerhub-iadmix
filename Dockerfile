@@ -8,7 +8,7 @@ MAINTAINER Jihoon Kim "j5kim@ucsd.edu"
 RUN apt-get update -y && apt-get install -y  autoconf build-essential git \
   g++ libncurses5-dev libssl-dev make pkg-config software-properties-common \
   python wget zip zlibc zlib1g zlib1g-dev && \
-  mkdir -p /mydata && mkdir -p /opt/workspace
+  mkdir -p /mydata 
 
 ### install vcftools to convert .vcf to PLINK format file
 RUN wget https://github.com/vcftools/vcftools/tarball/master &&  \
@@ -29,7 +29,7 @@ unzip hapmap3.8populations.hg19.zip && \
 rm hapmap3.8populations.hg19.zip
 
 # download workflow and example running scripts
-RUN cd /opt/workspace &&  \
+RUN cd /opt &&  \
  wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/workflow.sh && \
  cd /mydata  && \
  wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/runexample.sh
