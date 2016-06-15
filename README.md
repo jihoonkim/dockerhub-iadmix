@@ -12,4 +12,4 @@ docker push  j5kim/iadmix:latest
 docker run -t -i -m 4g -v /Users/JohnDoe:/mydata j5kim/iadmix:latest /bin/bash /opt/runexample.sh
 
 ### run with a user's own input data
-docker run -t -i -m 4g -v /Users/JohnDoe:/mydata j5kim/iadmix:latest /bin/bash /opt/workflow.sh /mydata/NA12878_GIAB
+docker run -t -i -m 4g -v /Users/JohnDoe:/mydata j5kim/iadmix:latest /bin/bash /opt/workflow.sh /mydata/runinput/run.cfg
