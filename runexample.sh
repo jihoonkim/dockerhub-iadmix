@@ -32,7 +32,7 @@ mkdir -p /mydata/runoutput
 cd /mydata/runinput
 if [ !  -f /mydata/runinput/NA12878_GIAB.vcf ]; then
    # download an example input file (.vcf) from NCBI
-   wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/latest/supplementaryfiles/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
+   wget ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.2/supplementaryfiles/NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
 
    # extract the compressed file 
    gunzip NA12878_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-Solid_ALLCHROM_v3.2_all.vcf.gz
