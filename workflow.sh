@@ -8,12 +8,12 @@
 #                    (https://hub.docker.com/r/j5kim/iadmix)
 #                to calculate population allele frequency on input .vcf file.
 #                 argument 1:  .vcf file
-#                 argument 2:  HapMap population allele frequency file
 #-----------------------------------------------------------------------------
 export INPUT_VCF=$1
-export RESOURCE_DATA=$2
 
+# HapMap population allele frequency file
 export iADMIX_DIR=/opt/ancestry
+export RESOURCE_DATA=${iADMIX_DIR}/hapmap3.8populations.hg19 
 export OUTPUT_PREFIX=${INPUT_VCF}
 
 ### convert .vcf to PLINK format (.ped and .map)
