@@ -7,7 +7,6 @@
 #  Description : Proviosions iAdmix docker
 #                        (https://hub.docker.com/r/j5kim/iadmix)
 #                to calculate population allele frequency for an input .vcf.
-# 
 #-----------------------------------------------------------------------------
 ### update the repository source list 
 apt-get update -y 
@@ -29,8 +28,6 @@ make install
 
 ### install iADMIX to compute population allele frequencies
 cd /opt 
-#wget https://sites.google.com/site/vibansal/software/iAdmix/iADMIX-v0.2.zip 
-#unzip iADMIX-v0.2.zip 
 git clone https://github.com/vibansal/ancestry.git
 cd ancestry
 make all
@@ -46,6 +43,7 @@ rm hapmap3.8populations.hg19.zip
 
 ### make a directory for workflow and download a workflow script
 mkdir -p /workflow 
+cd /workflow
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/workflow.sh
 
 
@@ -58,7 +56,8 @@ cd /testrun
 # gunzip HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.1_highconf_phased.vcf.gz
 # mv HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.1_highconf_phased.vcf HG001.vcf
 # vcftools --vcf HG001.vcf --chr 22 --recode --out HG001_chr22.vcf
-wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/HG001_chr22.vcf 
+wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/HG001_chr22.vcf.gz
+gunzip HG001_chr22.vcf.gz
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/testrun.sh
 
 

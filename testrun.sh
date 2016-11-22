@@ -9,4 +9,4 @@
 #                 argument 2:  HapMap population allele frequency file
 #                 argument 3:  directory path to a main script, runancestry.py
 #-----------------------------------------------------------------------------
-bash workflow.sh /testrun/HG001_chr22.vcf /opt/ancestry/hapmap3.8populations.hg19 /opt/ancestry
+bash /workflow/workflow.sh /testrun/HG001_chr22.vcf /opt/ancestry/hapmap3.8populations.hg19 /opt/ancestry
