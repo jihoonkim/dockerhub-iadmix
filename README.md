@@ -20,6 +20,8 @@ mv HG001_GRCh37_GIAB_highconf_CG-IllFB-IllGATKHC-Ion-10X-SOLID_CHROM1-X_v.3.3.1_
 
 vcftools --vcf HG001.vcf --chr 22 --recode --out /testrun/HG001_chr22.vcf
 
+### Test run is success if the last line of final ouput, /testrun/HG001_chr22.vcf.INTEGRATION.input.ancestry, has the following allele frequencies
+MKK:0.1887 CEU:0.8113 FINAL_NZ_PROPS
 
 ### run with a user's own input .vcf data 
 docker run -t -i -m 4g -v /Users/JohnDoe/mylocaldirectory:/mydata j5kim/iadmix:latest /bin/bash /workflow/workflow.sh /mydata/my.vcf
