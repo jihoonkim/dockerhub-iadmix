@@ -7,11 +7,13 @@
 #  Description : A workflow script for iAdmix docker 
 #                    (https://hub.docker.com/r/j5kim/iadmix)
 #                to calculate population allele frequency on input .vcf file.
+#                 argument 1:  .vcf file
+#                 argument 2:  HapMap population allele frequency file
 #-----------------------------------------------------------------------------
 export INPUT_VCF=$1
 export RESOURCE_DATA=$2
-export iADMIX_DIR=$3
 
+export iADMIX_DIR=/opt/ancestry
 export OUTPUT_PREFIX=${INPUT_VCF}
 
 ### convert .vcf to PLINK format (.ped and .map)
