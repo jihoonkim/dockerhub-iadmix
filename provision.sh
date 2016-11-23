@@ -45,7 +45,7 @@ rm hapmap3.8populations.hg19.zip
 mkdir -p /workflow 
 cd /workflow
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/workflow.sh
-
+chmod a+x workflow.sh
 
 ### make a directory for a test run
 mkdir -p /testrun 
@@ -59,7 +59,7 @@ cd /testrun
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/HG001_chr22.vcf.gz
 gunzip HG001_chr22.vcf.gz
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/testrun.sh
-
+chmod a+x testrun.sh
 
 ### make a directory for a user run
 mkdir -p /mydata 

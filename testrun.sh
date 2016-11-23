@@ -6,13 +6,12 @@
 #  Last update : 11/22/2016
 #  Description : A test run script for iAdmix docker 
 #                 argument 1:  .vcf file
-#                 argument 2:  HapMap population allele frequency file
 #-----------------------------------------------------------------------------
 # call workflow with an example test input
-bash /workflow/workflow.sh /testrun/HG001_chr22.vcf /opt/ancestry/hapmap3.8populations.hg19 
+bash /workflow/workflow.sh /testrun/HG001_chr22.vcf 
 
 # an output from the test run
-TESTRUN_OUTPUT=${OUTPUT_PREFIX}.INTEGRATION.input.ancestry 
+TESTRUN_OUTPUT=/testrun/HG001_chr22.vcf.INTEGRATION.input.ancestry 
 
 # "Gold Standard" desired output
 DESIRED_OUTPUT="MKK:0.1887 CEU:0.8113 FINAL_NZ_PROPS"
