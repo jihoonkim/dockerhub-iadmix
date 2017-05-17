@@ -3,8 +3,7 @@
 #-----------------------------------------------------------------------------
 #  File name : provision.sh
 #  Author    : Jihoon Kim
-#  Last update : 11/22/2016
-#  Description : Proviosions iAdmix docker
+#  Description : Create iAdmix docker
 #                        (https://hub.docker.com/r/j5kim/iadmix)
 #                to calculate population allele frequency for an input .vcf.
 #-----------------------------------------------------------------------------
@@ -36,16 +35,16 @@ make all
 ### download resource data, the population allele frequencies for common SNPs
 ###  from the International HapMap project (ftp://ftp.ncbi.nlm.nih.gov/hapmap)
 cd /opt/ancestry
-wget https://sites.google.com/site/vibansal/software/iAdmix/hapmap3.8populations.hg19.zip 
+wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/hapmap3.8populations.hg19.zip
 unzip hapmap3.8populations.hg19.zip
 rm hapmap3.8populations.hg19.zip
-
 
 ### make a directory for workflow and download a workflow script
 mkdir -p /workflow 
 cd /workflow
 wget https://raw.githubusercontent.com/jihoonkim/dockerhub-iadmix/master/workflow.sh
 chmod a+x workflow.sh
+
 
 ### make a directory for a test run
 mkdir -p /testrun 
